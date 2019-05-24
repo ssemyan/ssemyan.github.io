@@ -31,7 +31,7 @@ cat mynewkey_rsa.pub
 
 This will display the contents of the public key file which you can copy and then paste into the SSH section
 
-![Generated Key](/assets/images/generating-ssh-keys-3.jpg)
+![Creating a new VM](/assets/images/generating-ssh-keys-3.jpg)
 
 Once the VM is created, you should be able to ssh to it in your Bash shell by using your private key and the username/IP address of the VM you created.
 
@@ -39,7 +39,7 @@ Once the VM is created, you should be able to ssh to it in your Bash shell by us
 ssh -i mynewkey_rsa myadminuser@13.92.100.189
 ```
 
-![Generated Key](/assets/images/generating-ssh-keys-4.jpg)
+![A successful login](/assets/images/generating-ssh-keys-4.jpg)
 
 If you have an instance that you connect to on a regular basis, you can create an [ssh config](http://man.openbsd.org/ssh_config.5){:target="_blank"} file to store the settings for that VM. To do this, create a file called *config* in your *.ssh* directory (found in your home directory), or edit it if it already exists. This file can have multiple entries. To add an entry for your new VM, give it a name (it can be anything but should be easy to remember) and then set the host name, username, and identity file (which you should probably move into the *.ssh* directory). For example:
 
