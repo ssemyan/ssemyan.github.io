@@ -149,10 +149,11 @@ blockquote {
  */
 pre,
 code {
-  @include relative-font-size(0.9375);
-  border: 1px solid $grey-color-light;
-  border-radius: 3px;
-  background-color: #eef;
+    border: 1px solid $grey-color-light;
+    border-radius: 3px;
+    background-color: $code-background-color;
+    line-height: normal;
+    font-size: $code-font-size;
 }
 
 code {

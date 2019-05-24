@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 
 // Define defaults for each variable.
 
@@ -21,13 +21,17 @@ $orange-color:     #f66a0a !default;
 $table-text-align: left !default;
 
 // Width of the content area
-$content-width:    800px !default;
+$content-width:    1000px !default;
 
 $on-palm:          600px !default;
 $on-laptop:        800px !default;
 
 $on-medium:        $on-palm !default;
 $on-large:         $on-laptop !default;
+
+// Code
+$code-background-color: #f5f5f5;
+$code-font-size:        13px;
 
 // Use media queries like this:
 // @include media-query($on-palm) {
