@@ -6,7 +6,7 @@ excerpt: "How to generate SSH keys for logging into Azure Linux VMs."
 ---
 When creating new Azure Linux virtual machines, it is recommended you use SSH keys to connect to the VM rather than a username/password combination. Creating these keys is simple using Bash. 
 
-Bash is native in Linux and Mac OS X but clients are available on Windows as well. [Git for Windows](https://git-scm.com/){:target="_blank"} comes with the Git Bash client. Otherwise if you are running Windows 10 with the Anniversary Update, you can use the [Windows Ubuntu Bash client](https://docs.microsoft.com/en-us/windows/wsl/about){:target="_blank"}. This demo was done using Git Bash but the steps should be the same in other Bash clients.
+Bash is native in Linux and Mac OS X but clients are available on Windows as well. [Git for Windows](https://git-scm.com/) comes with the Git Bash client. Otherwise if you are running Windows 10 with the Anniversary Update, you can use the [Windows Ubuntu Bash client](https://docs.microsoft.com/en-us/windows/wsl/about). This demo was done using Git Bash but the steps should be the same in other Bash clients.
 
 From the Bash command prompt, run ssh-keygen with type ‘rsa’. You will be prompted for a file name and a passphrase which you can leave blank if you want. This will create the public and private RSA files.
 
@@ -41,7 +41,7 @@ ssh -i mynewkey_rsa myadminuser@13.92.100.189
 
 ![A successful login](/assets/images/generating-ssh-keys-4.jpg)
 
-If you have an instance that you connect to on a regular basis, you can create an [ssh config](http://man.openbsd.org/ssh_config.5){:target="_blank"} file to store the settings for that VM. To do this, create a file called *config* in your *.ssh* directory (found in your home directory), or edit it if it already exists. This file can have multiple entries. To add an entry for your new VM, give it a name (it can be anything but should be easy to remember) and then set the host name, username, and identity file (which you should probably move into the *.ssh* directory). For example:
+If you have an instance that you connect to on a regular basis, you can create an [ssh config](http://man.openbsd.org/ssh_config.5) file to store the settings for that VM. To do this, create a file called *config* in your *.ssh* directory (found in your home directory), or edit it if it already exists. This file can have multiple entries. To add an entry for your new VM, give it a name (it can be anything but should be easy to remember) and then set the host name, username, and identity file (which you should probably move into the *.ssh* directory). For example:
 
 ```
 Host myvm

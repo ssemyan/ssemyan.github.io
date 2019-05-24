@@ -4,9 +4,9 @@ title: "Creating Azure Resources with ARM Templates Step by Step"
 categories: DevOps
 excerpt: "This article explains how to use PowerShell and ARM templates to build out a Linux VM and its associated components such as networking and security."
 ---
-*The files used in this article can be found in GitHub here: [https://github.com/ssemyan/BasicAzureLinuxVmArmTemplate](https://github.com/ssemyan/BasicAzureLinuxVmArmTemplate){:target="_blank"}*
+*The files used in this article can be found in GitHub here: [https://github.com/ssemyan/BasicAzureLinuxVmArmTemplate](https://github.com/ssemyan/BasicAzureLinuxVmArmTemplate)*
 
-There are many ways to script the creation of virtual machines, services, and other resources in Azure. Available tools include PowerShell, cross-platform command line tools, and SDKs for Java, .NET and other languages. These resources can be found [here](https://azure.microsoft.com/en-us/downloads/){:target="_blank"}.
+There are many ways to script the creation of virtual machines, services, and other resources in Azure. Available tools include PowerShell, cross-platform command line tools, and SDKs for Java, .NET and other languages. These resources can be found [here](https://azure.microsoft.com/en-us/downloads/).
 
 Azure Resource Manager (ARM) templates are a way of describing resources in JSON. These templates can be used by PowerShell or the command line tools to build out deployments including networking, services, VMs, etc.
 
@@ -20,7 +20,7 @@ Doing this will generate a set of files you can use to recreate the contents of 
 
 ![Generated Template](/assets/images/arm-templates-step-by-step-2.png)
 
-These files are a good start but if you want to create re-usable deployments you will want to edit them a bit. The files referenced in this article can be found on GitHub here: [https://github.com/ssemyan/BasicAzureLinuxVmArmTemplate](https://github.com/ssemyan/BasicAzureLinuxVmArmTemplate){:target="_blank"}
+These files are a good start but if you want to create re-usable deployments you will want to edit them a bit. The files referenced in this article can be found on GitHub here: [https://github.com/ssemyan/BasicAzureLinuxVmArmTemplate](https://github.com/ssemyan/BasicAzureLinuxVmArmTemplate)
 
 For deploying using PowerShell and JSON templates, there are three files: *deploy.ps1*, *parameters.json*, and *template.json*. We will go over each of these in detail.
 
@@ -207,11 +207,11 @@ Let’s take a close look at each of these files. Looking first at the template 
   },
 ```
 
-Each parameter has a name, a type, and (optionally) a description. Because the parameters change per deployment you may have multiple parameter files, one for each type of VM you might want to create. Note that this example uses SSH keys instead of passwords. For more information on SSH key creation, see [Generating SSH keys for Azure Linux VMs]({% post_url 2016-08-24-generating-ssh-keys %}){:target="_blank"}
+Each parameter has a name, a type, and (optionally) a description. Because the parameters change per deployment you may have multiple parameter files, one for each type of VM you might want to create. Note that this example uses SSH keys instead of passwords. For more information on SSH key creation, see [Generating SSH keys for Azure Linux VMs]({% post_url 2016-08-24-generating-ssh-keys %})
 
-**Note:** putting passwords and SSH keys in plain text in parameter files is NOT a best practice. A better practice would be to place them in securestrings and pull values from the KeyVault at deploy time instead. This article keeps things simple, but more information on this topic can be found in [Create an SSL enabled Web server farm with VM Scale Sets](){:target="_blank"}
+**Note:** putting passwords and SSH keys in plain text in parameter files is NOT a best practice. A better practice would be to place them in securestrings and pull values from the KeyVault at deploy time instead. This article keeps things simple, but more information on this topic can be found in [Create an SSL enabled Web server farm with VM Scale Sets]()
 
-Next in the template file are variables. These are settings that are either calculated or are not changed for different deployments. You will notice the use of various functions such as concat, substring, uniquestring, etc. There are many functions which can be used in ARM templates and they are documented [here](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-functions){:target="_blank"}. The variable section for our file looks like this:
+Next in the template file are variables. These are settings that are either calculated or are not changed for different deployments. You will notice the use of various functions such as concat, substring, uniquestring, etc. There are many functions which can be used in ARM templates and they are documented [here](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-functions). The variable section for our file looks like this:
 
 ```
 "variables": {
@@ -289,6 +289,6 @@ The *New-AzureRmResourceGroupDeployment* cmdlet will not try to create resources
 
 Hopefully this article has been useful in demystifying Azure ARM Templates. Automated and scripted deployments are critical for creating cloud infrastructure quickly and in a repeatable fashion. ARM templates are a useful way of describing your infrastructure as code.
 
-A great resource with many examples of ARM templates is the Azure Quickstart Template project on GitHub: [https://github.com/Azure/azure-quickstart-templates](https://github.com/Azure/azure-quickstart-templates){:target="_blank"} This is the place to go to see how to create various resource scenarios with ARM templates. 
+A great resource with many examples of ARM templates is the Azure Quickstart Template project on GitHub: [https://github.com/Azure/azure-quickstart-templates](https://github.com/Azure/azure-quickstart-templates) This is the place to go to see how to create various resource scenarios with ARM templates. 
 
-The files used in this article can be found in GitHub here: [https://github.com/ssemyan/BasicAzureLinuxVmArmTemplate](https://github.com/ssemyan/BasicAzureLinuxVmArmTemplate){:target="_blank"}
+The files used in this article can be found in GitHub here: [https://github.com/ssemyan/BasicAzureLinuxVmArmTemplate](https://github.com/ssemyan/BasicAzureLinuxVmArmTemplate)
