@@ -207,7 +207,7 @@ Let’s take a close look at each of these files. Looking first at the template 
   },
 ```
 
-Each parameter has a name, a type, and (optionally) a description. Because the parameters change per deployment you may have multiple parameter files, one for each type of VM you might want to create. Note that this example uses SSH keys instead of passwords. For more information on SSH key creation, see [Generating SSH keys for Azure Linux VMs](){:target="_blank"}
+Each parameter has a name, a type, and (optionally) a description. Because the parameters change per deployment you may have multiple parameter files, one for each type of VM you might want to create. Note that this example uses SSH keys instead of passwords. For more information on SSH key creation, see [Generating SSH keys for Azure Linux VMs]({% post_url 2016-08-24-generating-ssh-keys %}){:target="_blank"}
 
 **Note:** putting passwords and SSH keys in plain text in parameter files is NOT a best practice. A better practice would be to place them in securestrings and pull values from the KeyVault at deploy time instead. This article keeps things simple, but more information on this topic can be found in [Create an SSL enabled Web server farm with VM Scale Sets](){:target="_blank"}
 
