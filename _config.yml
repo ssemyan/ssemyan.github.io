@@ -1,4 +1,31 @@
-title : ssemyan blog
-author :
-  name : Scott Semyan
-  github : ssemyan
+title: Azure CSA Notes
+author: Scott Semyan
+description: Notes from a Cloud Solution Architect working with Microsoft Azure
+
+show_excerpts: true # set to true to show excerpts on the homepage
+
+# Minima date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+minima:
+  date_format: "%b %-d, %Y"
+
+  # generate social links in footer
+  social_links:
+    github:  jekyll
+    rss: rss
+    linkedin: scottsemyan
+    stackoverflow: "4355828"
+
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+#header_pages:
+# - about.md
+
+exclude: 
+ - runblog.sh 
+ - Gemfile
+ - Gemfile.lock
+
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag
